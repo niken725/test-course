@@ -16,7 +16,7 @@ public class hw2 {
 
     @BeforeClass
     public static void setup() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Kate\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\ALL\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
         //driver.manage().window().maximize();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -33,11 +33,18 @@ public class hw2 {
         clickLang.click();
         WebElement findSelect = driver.findElement(By.cssSelector(".select__button"));
         findSelect.click();
-        WebElement lang = driver.findElement(By.xpath("//*[text()='English']"));
+        WebElement lang = driver.findElement(By.xpath("(//*[text()='English'])[2]"));
         lang.click();
-        //WebElement FindResult = driver.findElement(By.cssSelector("li[data-cid='0'] a.organic__url"));
-       // String ResultText = FindResult.getText();
-        //Assert.assertEquals("Погода в Пензе", ResultText);
+        WebElement saveButton = driver.findElement(By.cssSelector(".button_theme_action"));
+        saveButton.click();
+        driver.get("https://yandex.ru/");
+        findMenu = driver.findElement(By.cssSelector(".link.dropdown-menu__switcher"));
+        findMenu.click();
+        findSeting = driver.findElement(By.xpath("//a[text()='Настройки портала']"));
+        findSeting.click();
+        WebElement FindResult = driver.findElement(By.cssSelector("a[data-statlog='tabs.search']"));
+        String ResultText = FindResult.getText();
+        Assert.assertEquals("Search", ResultText);
     }
 
 }
