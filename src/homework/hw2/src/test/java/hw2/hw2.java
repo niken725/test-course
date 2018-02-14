@@ -1,5 +1,6 @@
 package hw2;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -16,10 +17,10 @@ public class hw2 {
 
     @BeforeClass
     public static void setup() {
-        System.setProperty("webdriver.chrome.driver", "D:\\ALL\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Kate\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
-        //driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://yandex.ru/");
     }
 
@@ -37,7 +38,7 @@ public class hw2 {
         lang.click();
         WebElement saveButton = driver.findElement(By.cssSelector(".button_theme_action"));
         saveButton.click();
-        driver.get("https://yandex.ru/");
+        //Проверка на изменение
         findMenu = driver.findElement(By.cssSelector(".link.dropdown-menu__switcher"));
         findMenu.click();
         findSeting = driver.findElement(By.xpath("//a[text()='Настройки портала']"));
@@ -47,4 +48,8 @@ public class hw2 {
         Assert.assertEquals("Search", ResultText);
     }
 
+    @AfterClass
+    public static void tearDown() {
+        driver.quit();
+    }
 }
