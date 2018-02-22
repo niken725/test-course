@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SearchYaPage {
+public class SearchYaPage  {
 
         private By searchInput = By.cssSelector("#text");
         private By clickButton = By.cssSelector(".search2__button button");

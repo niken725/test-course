@@ -6,18 +6,18 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import pages.SearchYaPage;
 
-public class SearchTest extends BaseTest {
+public class YaTest extends BaseTest {
 
         private static SearchYaPage searchYaPage;
 
         @BeforeClass
-        public void beforeTest() throws InterruptedException {
+        public void beforeTest()  {
             searchYaPage = PageFactory.initElements(driver, SearchYaPage.class);
         }
 
 
         @Test
-        public void searchTest() throws InterruptedException {
+        public void searchTest() {
             driver.get("https://ya.ru/");
             searchYaPage.search("Погода пенза");
 
