@@ -1,0 +1,4 @@
+pages\BasePage.class
+pages\SearchYaPage.class
+pages\YaMarketPage.class
+pages\ChangeLngPage.class
