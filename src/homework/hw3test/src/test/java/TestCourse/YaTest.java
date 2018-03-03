@@ -1,10 +1,11 @@
 package TestCourse;
 
-import org.junit.Assert;
+
 
 
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.SearchYaPage;

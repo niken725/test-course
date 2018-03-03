@@ -34,7 +34,7 @@ public class MarketTest extends BaseTest {
     }
 
     @Test
-    public void sortPriceAscTest () {
+    public void sortPriceAscTest ()  {
         driver.get("https://market.yandex.ru/");
         yaMarketPage.searchContent("холодильник");
         yaMarketPage.sortPriceAsc();

@@ -9,12 +9,11 @@ import java.util.List;
 
 public class YaMarketPage  extends BasePage{
 
-    //private static BasePage basePage;
-
     private By searchInput = By.cssSelector("#header-search");
     private By searchButton = By.cssSelector(".button2");
     private By searchContentField = By.cssSelector(".n-snippet-card2");
     private By sortPriceField = By.xpath("//a[text()=\"по цене\"]");
+    private By sortDefoltField = By.xpath("//a[text()=\"по умолчанию\"]");
     private By sortPriceIconField = By.cssSelector(".n-filter-sorter.n-filter-sorter_state_select");
     private By priceField = By.cssSelector(".n-snippet-card2__main-price .price");
 
@@ -31,19 +30,21 @@ public class YaMarketPage  extends BasePage{
     }
 
     public Integer getContentResult() {
+
         return driver.findElements(searchContentField).size();
     }
 
     public void sortPriceAsc() {
+        clickByElement(sortDefoltField);
         clickByElement(sortPriceField);
     }
 
     public String sortIconResult() {
-        driver.navigate().refresh();
         return driver.findElement(sortPriceIconField).getAttribute("class");
     }
 
     public  void sortPriceDesc() {
+        clickByElement(sortDefoltField);
         clickByElement(sortPriceField);
         clickByElement(sortPriceField);
     }
