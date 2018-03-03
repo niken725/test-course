@@ -1,4 +1,2 @@
-sudo: false
 language: java
-instal: maven deps
 script: mvn -test
