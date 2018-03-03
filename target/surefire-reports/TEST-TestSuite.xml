@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="TestSuite" time="36.686" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="TestSuite" time="48.004" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="9.0.4+11"/>
@@ -64,11 +64,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="TestCourse.LngTest" name="lngTest" time="4.965"/>
-  <testcase classname="TestCourse.MarketTest" name="marketTest" time="6.222"/>
-  <testcase classname="TestCourse.MarketTest" name="sortPriceAscIconTest" time="5.074"/>
-  <testcase classname="TestCourse.MarketTest" name="sortPriceAscTest" time="6.815"/>
-  <testcase classname="TestCourse.MarketTest" name="sortPriceDescIconTest" time="4.373"/>
-  <testcase classname="TestCourse.MarketTest" name="sortPriceDescTest" time="7.29"/>
-  <testcase classname="TestCourse.YaTest" name="searchTest" time="1.947"/>
+  <testcase classname="TestCourse.LngTest" name="lngTest" time="4.499"/>
+  <testcase classname="TestCourse.MarketTest" name="marketTest" time="5.704"/>
+  <testcase classname="TestCourse.MarketTest" name="sortPriceAscIconTest" time="8.516"/>
+  <testcase classname="TestCourse.MarketTest" name="sortPriceAscTest" time="15.648"/>
+  <testcase classname="TestCourse.MarketTest" name="sortPriceDescIconTest" time="4.06"/>
+  <testcase classname="TestCourse.MarketTest" name="sortPriceDescTest" time="7.38"/>
+  <testcase classname="TestCourse.YaTest" name="searchTest" time="2.197"/>
 </testsuite>
