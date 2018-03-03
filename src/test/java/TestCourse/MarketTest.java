@@ -22,7 +22,7 @@ public class MarketTest extends BaseTest {
         driver.get("https://market.yandex.ru/");
         yaMarketPage.searchContent("холодильник");
         int result = yaMarketPage.getContentResult();
-        Assert.assertEquals(12, result);
+        Assert.assertEquals(48, result);
     }
 
     @Test
