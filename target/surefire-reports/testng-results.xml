@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-03-03T19:16:38Z" name="Command line suite" finished-at="2018-03-03T19:17:27Z" duration-ms="49220">
+    <groups>
+    </groups>
+    <test started-at="2018-03-03T19:16:38Z" name="Command line test" finished-at="2018-03-03T19:17:27Z" duration-ms="49220">
+      <class name="TestCourse.LngTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCourse.LngTest@30ee2816]" started-at="2018-03-03T22:16:38Z" name="setup" finished-at="2018-03-03T22:16:42Z" duration-ms="3886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestCourse.LngTest@30ee2816]" started-at="2018-03-03T22:16:42Z" name="beforeTest" finished-at="2018-03-03T22:16:42Z" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="lngTest()[pri:0, instance:TestCourse.LngTest@30ee2816]" started-at="2018-03-03T22:16:42Z" name="lngTest" finished-at="2018-03-03T22:16:47Z" duration-ms="4967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lngTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCourse.LngTest@30ee2816]" started-at="2018-03-03T22:16:47Z" name="tearDown" finished-at="2018-03-03T22:16:48Z" duration-ms="824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCourse.LngTest -->
+      <class name="TestCourse.MarketTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCourse.MarketTest@31d7b7bf]" started-at="2018-03-03T22:16:48Z" name="setup" finished-at="2018-03-03T22:16:51Z" duration-ms="3075" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestCourse.MarketTest@31d7b7bf]" started-at="2018-03-03T22:16:51Z" name="beforeTest" finished-at="2018-03-03T22:16:51Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="marketTest()[pri:0, instance:TestCourse.MarketTest@31d7b7bf]" started-at="2018-03-03T22:16:51Z" name="marketTest" finished-at="2018-03-03T22:16:57Z" duration-ms="6218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- marketTest -->
+        <test-method signature="sortPriceAscIconTest()[pri:0, instance:TestCourse.MarketTest@31d7b7bf]" started-at="2018-03-03T22:16:57Z" name="sortPriceAscIconTest" finished-at="2018-03-03T22:17:02Z" duration-ms="5076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortPriceAscIconTest -->
+        <test-method signature="sortPriceAscTest()[pri:0, instance:TestCourse.MarketTest@31d7b7bf]" started-at="2018-03-03T22:17:02Z" name="sortPriceAscTest" finished-at="2018-03-03T22:17:09Z" duration-ms="6815" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortPriceAscTest -->
+        <test-method signature="sortPriceDescIconTest()[pri:0, instance:TestCourse.MarketTest@31d7b7bf]" started-at="2018-03-03T22:17:09Z" name="sortPriceDescIconTest" finished-at="2018-03-03T22:17:13Z" duration-ms="4373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortPriceDescIconTest -->
+        <test-method signature="sortPriceDescTest()[pri:0, instance:TestCourse.MarketTest@31d7b7bf]" started-at="2018-03-03T22:17:13Z" name="sortPriceDescTest" finished-at="2018-03-03T22:17:21Z" duration-ms="7290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortPriceDescTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCourse.MarketTest@31d7b7bf]" started-at="2018-03-03T22:17:21Z" name="tearDown" finished-at="2018-03-03T22:17:22Z" duration-ms="899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCourse.MarketTest -->
+      <class name="TestCourse.YaTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCourse.YaTest@635eaaf1]" started-at="2018-03-03T22:17:22Z" name="setup" finished-at="2018-03-03T22:17:25Z" duration-ms="3042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestCourse.YaTest@635eaaf1]" started-at="2018-03-03T22:17:25Z" name="beforeTest" finished-at="2018-03-03T22:17:25Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="searchTest()[pri:0, instance:TestCourse.YaTest@635eaaf1]" started-at="2018-03-03T22:17:25Z" name="searchTest" finished-at="2018-03-03T22:17:27Z" duration-ms="1946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCourse.YaTest@635eaaf1]" started-at="2018-03-03T22:17:27Z" name="tearDown" finished-at="2018-03-03T22:17:27Z" duration-ms="759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCourse.YaTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
