@@ -42,6 +42,8 @@ public class MarketTest extends BaseTest {
         Assert.assertEquals(true, sortAscResult);
     }
 
+    
+
     @Test
     public void sortPriceDescIconTest() {
         driver.get("https://market.yandex.ru/");
