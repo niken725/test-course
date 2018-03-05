@@ -18,9 +18,9 @@ public class LngTest extends BaseTest {
     @Test
     public void lngTest() {
         driver.get("https://yandex.ru/");
-        changeLngPage.search();
+        changeLngPage.changeLanguage();
 
-        changeLngPage.searchResult();
+        changeLngPage.changeLanguageResult();
         String result = changeLngPage.getResult();
         Assert.assertEquals("Search", result);
     }

@@ -17,7 +17,7 @@ public class ChangeLngPage {
     public ChangeLngPage(WebDriver driver) {
         this.driver = driver;}
 
-    public void search() {
+    public void changeLanguage() {
         driver.findElement(menuField).click();
         driver.findElement(settingText).click();
         driver.findElement(languageText).click();
@@ -26,7 +26,7 @@ public class ChangeLngPage {
         driver.findElement(saveButton).click();
     }
 
-    public void searchResult() {
+    public void changeLanguageResult() {
         driver.findElement(menuField).click();
         driver.findElement(settingText).click();
     }
