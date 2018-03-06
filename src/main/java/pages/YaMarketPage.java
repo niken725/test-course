@@ -49,45 +49,22 @@ public class YaMarketPage  extends BasePage{
         clickByElement(sortPriceField);
     }
 
-    public Boolean sortPriceAscResult () {
+
+
+    public List<WebElement> sortAscPrice(){
         driver.navigate().refresh();
         List<WebElement> priceElements = driver.findElements(priceField);
-        ArrayList<Integer> prices = parsePrices(priceElements);
-        int i = 1;
-        Boolean sortAscResult = true;
-        while (i < prices.size()){
-            Integer element = prices.get(i-1);
-            Integer nextElement = prices.get(i);
-            if (element <= nextElement) {
-                sortAscResult = true;
-            }
-            else {sortAscResult = false;
-            break;}
-            i++;
-        }
-        return sortAscResult;
+        return priceElements;
     }
 
-    public Boolean sortPriceDescResult () {
+
+    public List<WebElement> sortDescPrice(){
         driver.navigate().refresh();
-        List<WebElement> elements = driver.findElements(priceField);
-        ArrayList<Integer> prices = parsePrices(elements);
-        int i = 1;
-        Boolean sortDescResult = true;
-        while (i < prices.size()){
-            Integer element = prices.get(i-1);
-            Integer nextElement = prices.get(i);
-            if (element >= nextElement) {
-                sortDescResult = true;
-            }
-            else {sortDescResult = false;
-                break;}
-            i++;
-        }
-        return sortDescResult;
+        List<WebElement> priceElements = driver.findElements(priceField);
+        return priceElements;
     }
 
-    protected ArrayList<Integer> parsePrices(List<WebElement> prices) {
+    public ArrayList<Integer> parsePrices(List<WebElement> prices) {
         ArrayList<Integer> convertResult = new ArrayList<Integer>();
 
         prices.forEach(element -> {

@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.YaMarketPage;
 
+import java.util.ArrayList;
+
 public class MarketTest extends BaseTest {
 
     private static YaMarketPage yaMarketPage;
@@ -33,16 +35,27 @@ public class MarketTest extends BaseTest {
         Assert.assertTrue( yaMarketPage.sortIconResult().contains("asc"),"true");
     }
 
+
     @Test
-    public void sortPriceAscTest ()  {
+    public void sortPriceAscTest() {
         driver.get("https://market.yandex.ru/");
         yaMarketPage.searchContent("холодильник");
         yaMarketPage.sortPriceAsc();
-        boolean sortAscResult = yaMarketPage.sortPriceAscResult();
-        Assert.assertEquals(true, sortAscResult);
+        ArrayList<Integer> prices = yaMarketPage.parsePrices(yaMarketPage.sortAscPrice());
+        int i = 1;
+        Boolean sortAscResult = true;
+        while (i < prices.size()){
+            Integer element = prices.get(i-1);
+            Integer nextElement = prices.get(i);
+            if (element <= nextElement) {
+                sortAscResult = true;
+            }
+            else {sortAscResult = false;
+                break;}
+            i++;
+        }
+        Assert.assertTrue(sortAscResult);
     }
-
-    
 
     @Test
     public void sortPriceDescIconTest() {
@@ -52,12 +65,25 @@ public class MarketTest extends BaseTest {
         Assert.assertTrue(yaMarketPage.sortIconResult().contains("desc"), "true");
     }
 
+
     @Test
     public void sortPriceDescTest() {
         driver.get("https://market.yandex.ru/");
         yaMarketPage.searchContent("холодильник");
         yaMarketPage.sortPriceDesc();
-        boolean sortDescResult = yaMarketPage.sortPriceDescResult();
-        Assert.assertEquals(true, sortDescResult);
+        ArrayList<Integer> prices = yaMarketPage.parsePrices(yaMarketPage.sortDescPrice());
+        int i = 1;
+        Boolean sortDescResult = true;
+        while (i < prices.size()){
+            Integer element = prices.get(i-1);
+            Integer nextElement = prices.get(i);
+            if (element >= nextElement) {
+                sortDescResult = true;
+            }
+            else {sortDescResult = false;
+                break;}
+            i++;
+        }
+        Assert.assertTrue(sortDescResult);
     }
 }
