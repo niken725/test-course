@@ -13,7 +13,11 @@ public class BaseTest {
 
     @BeforeClass
     public static void setup() {
-        System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+        if (System.getProperty("os.name").contains("Windows")) {
+            System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
+        }
+        else System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+       // System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
        // System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         //driver.manage().window().maximize();
